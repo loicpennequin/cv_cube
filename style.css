@@ -61,6 +61,11 @@ nav .nav-toggle{
   padding: 10px 5px;
   border-radius: 6px;
   font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#on.active, #off.active{
+  color: white;
 }
 
 nav .nav-toggle:hover:before{
@@ -78,7 +83,7 @@ nav .nav-toggle:hover:before{
 
 nav .nav-btn{
   padding: 10px;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   border: none;
   color: white;
   background: linear-gradient(rgba(0,0,0,0), rgba(255,255,255,0.2));
@@ -86,8 +91,8 @@ nav .nav-btn{
   transition: all 0.5s;
   font-family: 'Arsenal', sans-serif;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   left: 40px;
   opacity: 0;
@@ -169,8 +174,8 @@ footer.hidden{
 #cube {
   display: block;
   position: relative;
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-origin: center;
@@ -179,8 +184,9 @@ footer.hidden{
 
 .side{
   position: absolute;
-  min-height: 600px;
-  width: 600px;
+  min-height: 500px;
+  max-height: 500px;
+  width: 500px;
   /*-webkit-mask-image : radial-gradient(black, rgba(0,0,0,0));*/
   display: flex;
   justify-content: center;
@@ -188,7 +194,7 @@ footer.hidden{
   flex-direction: column;
   font-weight: bold;
   transition: all 1s;
-  padding: 20px 30px;
+  padding: 10px 30px;
   border: solid 10px var(--secondary-color);
   background: radial-gradient(rgba(240,240,240,1), rgba(0,0,0,0));
   user-select: none;
@@ -205,7 +211,7 @@ footer.hidden{
 .side h1{
   font-size: 2.5rem;
   text-shadow: 1px 3px 0 black;
-  margin-bottom: 0;
+  margin: 0;
 }
 .side .content{
   font-size: 0.9rem;
@@ -221,32 +227,32 @@ footer.hidden{
 
 #front {
   /*background-color: rgba(255,0,0,0.75);*/
-  transform: translateZ(300px);
+  transform: translateZ(250px);
 }
 
 #back {
-  transform: translateZ(-300px) rotateY(180DEG);
+  transform: translateZ(-250px) rotateY(180DEG);
   /*background-color: rgba(0,0,255,0.75);*/
 }
 
 #left {
-  transform: translateX(-300px) rotateY(270DEG)  ;
+  transform: translateX(-250px) rotateY(270DEG)  ;
   /*background-color: rgba(0,255,0,0.755);*/
 }
 
 #right {
-  transform: translateX(300px) rotateY(90DEG)  ;
+  transform: translateX(250px) rotateY(90DEG)  ;
   /*background-color: rgba(255,255,0,0.75);*/
 }
 
 #top {
   /*background-color: rgba(255,0,255,0.75);*/
-  transform: translateY(-300px) rotateX(-270DEG);
+  transform: translateY(-250px) rotateX(-270DEG);
 }
 
 #bottom {
   /*background-color: rgba(0,255,255,0.75);*/
-  transform: translateY(300px) rotateX(-90DEG);
+  transform: translateY(250px) rotateX(-90DEG);
 }
 
 
@@ -386,6 +392,7 @@ body.no-cube{
   transform: none !important;
   width: 40%;
   min-height: 200px;
+  max-height: 500px;
   margin: 0 auto 15px;
   justify-content: flex-start;
   border: solid 3px var(--secondary-color);
@@ -421,7 +428,7 @@ body.no-cube{
     opacity: 1;
   }
   to{
-    transform: translateX(250px);
+    transform: translateX(200px);
     opacity: 1;
   }
 }
@@ -436,7 +443,7 @@ body.no-cube{
     opacity: 1;
   }
   to{
-    transform: rotateZ(18DEG) translateX(250px) rotateZ(-18DEG);
+    transform: rotateZ(18DEG) translateX(200px) rotateZ(-18DEG);
     opacity: 1;
   }
 }
@@ -451,7 +458,7 @@ body.no-cube{
     opacity: 1;
   }
   to{
-    transform: rotateZ(36DEG) translateX(250px) rotateZ(-36DEG);
+    transform: rotateZ(36DEG) translateX(200px) rotateZ(-36DEG);
     opacity: 1;
   }
 }
@@ -466,7 +473,7 @@ body.no-cube{
     opacity: 1;
   }
   to{
-    transform: rotateZ(54DEG) translateX(250px) rotateZ(-54DEG);
+    transform: rotateZ(54DEG) translateX(200px) rotateZ(-54DEG);
     opacity: 1;
   }
 }
@@ -481,7 +488,7 @@ body.no-cube{
     opacity: 1;
   }
   to{
-    transform: rotateZ(72DEG) translateX(250px) rotateZ(-72DEG);
+    transform: rotateZ(72DEG) translateX(200px) rotateZ(-72DEG);
     opacity: 1;
   }
 }
@@ -496,7 +503,7 @@ body.no-cube{
     opacity: 1;
   }
   to{
-    transform: rotateZ(92DEG) translateX(250px) rotateZ(-92DEG);
+    transform: rotateZ(92DEG) translateX(200px) rotateZ(-92DEG);
     opacity: 1;
   }
 }

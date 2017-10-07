@@ -64,9 +64,7 @@ function moveCube(e){
   if(moveEnabled){
     cube.style.transform = `rotateY(${currentRotateY}DEG) rotateX(${currentRotateX}DEG)`;
 
-    document.querySelector('#debug').innerHTML = `
-      currentRotateX : ${currentRotateX}, currentRotateY : ${currentRotateY},
-    `
+    // document.querySelector('#debug').innerHTML = `currentRotateX : ${currentRotateX},currentRotateY : ${currentRotateY}`;
 
     // Sides content toggling
     if (currentRotateX > -30 && currentRotateX <30 && currentRotateY > -30 && currentRotateY <30){
@@ -164,13 +162,18 @@ function jumpToSection(newRotateY, newRotateX){
 };
 
 //Displaying correct side content
-function toggleContent(content){
-  setTimeout(()=>{
-    document.querySelectorAll('.side .content').forEach((p)=>{
-      p.classList.add('hidden');
-    });
-    document.querySelector(`${content} .content`).classList.remove('hidden');
-  }, 1000)
+function toggleContent(side){
+  if(cubeMode === true) {
+    setTimeout(()=>{
+      document.querySelectorAll('.side .content').forEach((p)=>{
+        p.classList.add('hidden');
+      });
+      document.querySelector(`${side} .content`).classList.remove('hidden');
+    }, 1000)
+  }else{
+    console.log(document.querySelector(side).offsetTop);
+    window.scrollTo(0, document.querySelector(side).offsetTop);
+  }
 }
 
 //Changing CSS Variables
@@ -207,7 +210,10 @@ function toggleNav(){
 
 function turnOffCube(){
   let sides = document.querySelectorAll('.side'),
-      footer = document.querySelector('footer');
+      footer = document.querySelector('footer'),
+      switchON = document.querySelector('#on'),
+      switchOFF = document.querySelector('#off');
+
   cubeMode = !cubeMode;
   cube.classList.toggle('no-cube');
   document.body.classList.toggle('no-cube');
@@ -216,4 +222,6 @@ function turnOffCube(){
    side.querySelector('.content').classList.remove('hidden')
   });
   footer.classList.toggle('hidden');
+  switchON.classList.toggle('active');
+  switchOFF.classList.toggle('active');
 }
