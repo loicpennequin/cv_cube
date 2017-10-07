@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>LOIC PENNEQUIN-DEVELOPPEUR WEB</title>
+  </head>
+
+  <body>
+
+
+    <nav>
+      <button class="nav-toggle" onclick="toggleNav()"><i class="fa fa-3x fa-bars" aria-hidden="true"></i></button>
+      <button id="front-btn" class="nav-btn active" onclick="goTo(this, 'home')">Home</button>
+      <button id="back-btn" class="nav-btn" onclick="goTo(this, 'about')">About</button>
+      <button id="left-btn" class="nav-btn" onclick="goTo(this, 'skills')">Skills</button>
+      <button id="right-btn" class="nav-btn" onclick="goTo(this, 'projets')">Projets</button>
+      <button id="top-btn" class="nav-btn" onclick="goTo(this, 'experience')">Exp.</button>
+      <button id="bottom-btn" class="nav-btn" onclick="goTo(this, 'misc')">Misc.</button>
+      <button id="cube-switch" onclick="turnOffCube()">Cube <span id="on">ON</span>/<span id="off">OFF</span></button>
+    </nav>
+
+    <div class="cube-wrapper">
+      <div id="cube">
+
+        <section class="side" id="front">
+          <h1>Loïc Pennequin</h1>
+          <div class="content">
+            <h2>Developpeur Web - Javascript Addict - <span>That guy who loves weird designs</span></h2>
+            <p>CV réalisé en CSS3 et VanillaJS : pas de librairie, pas de compiler, pas de framework.</p>
+            <p>Pas mal de tests bizarres par contre...</p>
+            <br><br><br>
+            <p style="text-align: center; font-size: 1.2rem;"><a href="mailto:lo.pennequin@gmail.com">Lo.pennequin@gmail.com</a> -
+            <a href="https://www.linkedin.com/in/lo%C3%AFc-pennequin-a90254133/">LINKEDIN</a> -
+            <a href="https://github.com/loicpennequin">GITHUB</a></p>
+          </div>
+        </section>
+
+        <section class="side" id="back">
+          <h1>About me</h1>
+          <div class="content hidden">
+            <p>Bonjour et bienvenue sur mon CV...euh...cubique. Mon nom est Loïc Pennequin, et je suis un développeur web full stack junior. Après un parcours universitaire éparpillé, j'ai décidé de saisir l'opportunité de me lancer dans le domaine du développement web qui m'avait longtemps fait de l'oeil en rejoignant la formation <a href="">POP School Lens</a>.</p>
+            <p>Décision qui s'est averée providentielle pour moi étant donné que j'ai ainsi découvert ma nouvelle passion (au grand damn de mes heures de sommeil).</p>
+            <p>Perfectionniste et curieux de nature, les challenges ne me font pas peur, bien au contraire, J'apprends vite et toute occasion de progresser dans le domaine du développement est une bénédiction pour moi.</p>
+          </div>
+        </section>
+
+        <section class="side" id="left">
+          <h1>Skills</h1>
+          <div class="content flex hidden">
+
+            <div class="list-wrapper">
+              <h3>Front-End</h3>
+              <ul class="skills-list">
+                <li>
+                  <img class="skill-icon" src="assets/html.svg" alt="logo html">
+                  HTML5
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/css.svg" alt="logo css">
+                  CSS
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/js.svg" alt="logo javascript">
+                  Javascript
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/bootstrap.svg" alt="logo bootstrap">
+                  Bootstrap
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/jquery.svg" alt="logo jquery">
+                  jQuery
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/angular.svg" alt="logo angular">
+                  AngularJS
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/p5.png" alt="logo p5">
+                  p5.js
+                </li>
+              </ul>
+            </div>
+
+            <div class="list-wrapper">
+              <h3>Back-End</h3>
+              <ul class="skills-list">
+                <li>
+                  <img class="skill-icon" src="assets/nodejs.svg" alt="logo nodejs">
+                  nodeJS
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/php.svg" alt="logo php">
+                  PHP
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/mysql.svg" alt="logo mysql">
+                  mySQL
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/express.svg" alt="logo express">
+                  Express
+                </li>
+              </ul>
+            </div>
+
+            <div class="list-wrapper">
+              <h3>Autres</h3>
+              <ul class="skills-list">
+                <li>
+                  <img class="skill-icon" src="assets/wordpress.svg" alt="logo wordpress">
+                  Wordpress
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/git.svg" alt="logo git">
+                  Git
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/sass.svg" alt="logo sass">
+                  Sass
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/gulp.svg" alt="logo html">
+                  Gulp
+                </li>
+                <li>
+                  <img class="skill-icon" src="assets/photoshop.svg" alt="logo html">
+                  Photoshop
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="side" id="right">
+          <h1>Projects</h1>
+          <div class="content flex hidden">
+            <article class="project-wrapper">
+              <div class="project-img" id="wm"></div>
+              <div class="project-legend">
+                <a href="https://whispering-mesa-93918.herokuapp.com">Système d'authentification / connexion réalisé avec NodeJS, AngularJS et MYSQL.</a>
+              </div>
+            </article>
+            <article class="project-wrapper">
+              <div class="project-img" id="explore"></div>
+              <div class="project-legend">
+                <a href="https://esj-explore-2017.github.io/esj-explore-2017/">Projet collaboratif entre Pop School Lens et l'ESJ de Lilledans le cadre du concours l'Equipe Explore.</a>
+              </div>
+            </article>
+            <article class="project-wrapper">
+              <div class="project-img" id="dot"></div>
+              <div class="project-legend">
+                <a href="https://loicpennequin.github.io/moving_dot/">Petit jeu développé intégralement en vanilla Javascript en parallèle de la formation POP School.</a>
+              </div>
+            </article>
+            <article class="project-wrapper">
+              <div class="project-img" id="loading"></div>
+              <div class="project-legend">
+                  <a href="https://loicpennequin.github.io/Loading-screen/">Ecran de chargement animé utiisant la librairie javascript P5.js.</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="side" id="top">
+          <h1>Experience</h1>
+          <div class="content hidden">
+            <ul class='exp-list'>
+              <li>
+                <span>Avrill 2017 - Juillet 2017 :</span> Développement front-end à <a href="http://www.alt-ecom.net/">ALT-ECOM</a> (stage)
+              </li>
+              <li>
+                <span>Novembre 2014 - Mars 2015 :</span> Agent d'accueil au Furet du Nord de Lille
+              </li>
+              <li>
+                <span>Eté 2008,2009 et 2010 :</span> Navette de transport à la Société de Secours Minière du Pas-de-Calais
+              </li>
+              <li>
+                <span>depuis toujours :</span> beaucoup trop de temps passé devant un écran d'ordinateur.
+              </li>
+            </ul>
+            <h4>Education :</h4>
+            <ul class='exp-list'>
+              <li>
+                <span>novembre 2016 - mai2017 :</span> Formation développeur Web/mobile à POP School Lens
+              </li>
+              <li>
+                <span>septembre 2011 - juillet 2014 :</span>  LLCE mention Anglais
+              </li>
+              <li>
+                <span>septembre 2010 - juillet 2011 :</span>  Première année de Sciences de l'Education spécialité FLE
+              </li>
+              <li>
+                <span>septembre 2006 - juillet 2010 :</span> LLLCE mention Japonais
+              </li>
+              <li>
+                <span>juillet 2005 :</span> Baccalauréat S option Sciences de l'Ingénieur
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="side" id="bottom">
+          <h1>Miscellaneous</h1>
+          <div class="content hidden">
+            <p>Permis B, véhiculé</p>
+            <p>Passions : Musique (guitare, batterie, piano), Dessin, Graphisme, Jeux videos (MOBAS, strategie, jeux de carte, jeux de combats...)...et coder, evidemment.</p>
+            <p>Cheveux : trop</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <footer>
+      Maintenez la souris enfoncée et deplacez vous ou utilisez le menu en haut à gauche4 pour naviguer.
+      <span id="debug"></span>
+    </footer>
+  </body>
+</html>
