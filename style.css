@@ -196,7 +196,7 @@ footer.hidden{
   transition: all 1s;
   padding: 10px 30px;
   border: solid 10px var(--secondary-color);
-  background: radial-gradient(rgba(240,240,240,1), rgba(0,0,0,0));
+  background: radial-gradient(rgba(240,240,240,1), rgba(255,255,255,0));
   user-select: none;
   border-radius: 30px;
 }
@@ -419,7 +419,8 @@ body.no-cube{
     width: 300px;
     min-height: 300px;
     max-height: 300px;
-    overflow: scroll
+    overflow: scroll;
+    background: rgba(255,255,255,0.8)
   }
   #front {
     transform: translateZ(150px);
