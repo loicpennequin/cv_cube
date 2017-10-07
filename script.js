@@ -13,13 +13,19 @@ let moveEnabled, jumpingToSection,
   =====================================================*/
 
 document.addEventListener('DOMContentLoaded', ()=>{
+
   let cube = document.querySelector('#cube');
+
+  console.log(window.innerWidth);
+  if (window.innerWidth < 768){
+    turnOffCube();
+  }
   document.addEventListener('mousemove', (e)=>{
     moveCube(e);
   });
   document.addEventListener('touchmove', (e)=>{
-    moveCube(e);
-  });
+    moveCube(e.changedTouches[0]);
+  }, false);
 });
 
 document.addEventListener('mousedown', ()=>{
@@ -28,19 +34,19 @@ document.addEventListener('mousedown', ()=>{
   }
 });
 
-document.addEventListener('touchstart', ()=>{
+document.addEventListener('touchstart', (e)=>{
   if (!jumpingToSection && cubeMode === true){
    moveEnabled = true;
   }
-});
+}, false);
 
 document.addEventListener('mouseup', ()=>{
   moveEnabled = false;
 });
 
-document.addEventListener('touchend', ()=>{
+document.addEventListener('touchend', (e)=>{
   moveEnabled = false;
-});
+}, false);
 
 
 /*=======================================================

@@ -404,6 +404,48 @@ body.no-cube{
   width: 100%;
 }
 
+/*media queries */
+
+@media (max-width : 768px){
+  .side.no-cube{
+    width: 100%;
+    max-height: 99999px;
+  }
+  #cube{
+    width: 300px;
+    height: 300px;
+  }
+  .side{
+    width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    overflow: scroll
+  }
+  #front {
+    transform: translateZ(150px);
+  }
+
+  #back {
+    transform: translateZ(-150px) rotateY(180DEG);
+  }
+
+  #left {
+    transform: translateX(-150px) rotateY(270DEG)  ;
+  }
+
+  #right {
+    transform: translateX(150px) rotateY(90DEG)  ;
+  }
+
+  #top {
+    transform: translateY(-150px) rotateX(-270DEG);
+  }
+
+  #bottom {
+    transform: translateY(150px) rotateX(-90DEG);
+  }
+
+}
 
 /*keyframes*/
 
